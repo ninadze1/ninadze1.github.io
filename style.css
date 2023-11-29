@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=Marhey&display=swap');
+
+/* общие стили*/
+
+:root{
+    --main-fnt-fam:  'Istok Web', sans-serif;
+    --hed-fnt-fam: 'Marhey', sans-serif;
+    --main-bg-color: #FFF;
+    --bn-color: rgba(33, 31, 31, 0.45);
+    --nav-color:  #49326B;
+    --nav-fn-size:32px;
+    
+}
+
+body{
+    margin: 0;
+    font-family: var(--main-fnt-fam);
+    background: var(--main-bg-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+/* Шапка */
+
+.logo{
+    width: 460px;
+}
+
+
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav{display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+
+}
+
+nav>a{
+    color:var(--nav-color);
+    
+    font-size: var(--nav-fn-size);
+}
+
+/* главная страница */
+
+.slider5{
+    background:rgba(130,92,131, 0.7);
+   
+    padding:30px 50px 50px;
+}
+
+
+
+
+
+h1{
+    font-family: var(--hed-fnt-fam);
+    text-align: center;
+    font-size: 40px;
+}
+
+.text-banner{
+    font-family: var(--hed-fnt-fam);
+    color: var(--main-bg-color);
+    position: absolute;
+    top: 320px;
+    left: 62px;
+    font-size: 40px;
+    z-index: 1;
+    text-align: center;
+}
+
+.about-us{
+    padding: 30px;
+    font-size: 24px;
+
+}
+
+/* магазин */
+
+.shop{
+    padding: 30px 0;
+    background: rgba(108, 3, 143, 0.38);
+    z-index: 2;
+}
+
+
+.categories{
+    height: 360px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background:var(--bn-color);
+   
+}
+
+.item-categories{
+    width: 340px;
+    height: 340px;
+    z-index: 1;
+    color: var(--main-bg-color);
+    text-align: center;
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   font-family: var(--hed-fnt-fam);
+   font-size: 40px;
+}
+
+.lamps{
+    color: white;
+    position: relative;
+}
+.lamps::before{
+    content: "";
+  position: absolute; /*  абсолютное позиционирование  */
+  top: 0; left: 0; /*  располагаем псевдоэлемент там же, где и .container  */
+  width: 100%; height: 100%; /*  задаем ему такие же размеры  */
+  background: url(/lamp.png);
+  background-position: center;
+  background-size: cover;
+  filter: brightness(.5);
+  z-index: -1; /*  располагаем псевдоэлемент за .container  */
+   
+}
+
+.shelves{
+    color: white;
+    position: relative;
+}
+.shelves::before{
+    background: url(/polka.png);
+    content: "";
+    position: absolute;
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background-position: center;
+    background-size: cover;
+    filter: brightness(.5);
+    z-index: -1; 
+     
+
+}
+
+.cats{
+    color: white;
+    position: relative;
+   
+}
+
+.cats::before{
+    background: url(/cat.png);
+    content: "";
+    position: absolute;
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background-position: center;
+    background-size: cover;
+    filter: brightness(.5);
+    z-index: -1; 
+}
+
+.vases{
+    color: white;
+    position: relative;
+}
+
+.vases::before{
+    background: url(/vaza.png);
+    content: "";
+    position: absolute;
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background-position: center;
+    background-size: cover;
+    filter: brightness(.5);
+    z-index: -1; 
+}
+/* подвал */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: space-around;
+    gap: 50px;
+}
+
+.footer-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-logo{
+   width: 238px;
+}
