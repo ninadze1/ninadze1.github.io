@@ -8,7 +8,9 @@
     --main-bg-color: #FFF;
     --bn-color: rgba(33, 31, 31, 0.45);
     --nav-color:  #49326B;
+    --btn-color:#825C83;
     --nav-fn-size:32px;
+    --hover-color:#e8dbf1;
     
 }
 
@@ -22,12 +24,14 @@ a{
     text-decoration: none;
 }
 
-
+*{
+    margin: 0;
+}
 
 /* Шапка */
 
 .logo{
-    width: 460px;
+    width: 240px;
 }
 
 
@@ -36,8 +40,10 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 40px;
 }
-nav{display: flex;
+nav{
+    display: flex;
     justify-content: space-evenly;
     gap: 20px;
     align-items: center;
@@ -54,13 +60,18 @@ nav>a{
 
 .slider5{
     background:rgba(130,92,131, 0.7);
-   
-    padding:30px 50px 50px;
+   height: 280px;
+     padding:0 50px; 
 }
 
+.banner{
+    background:rgba(130,92,131, 0.7);
+    height: 280px;
+}
 
-
-
+.slider{
+    height: 280px;
+}
 
 h1{
     font-family: var(--hed-fnt-fam);
@@ -72,7 +83,7 @@ h1{
     font-family: var(--hed-fnt-fam);
     color: var(--main-bg-color);
     position: absolute;
-    top: 320px;
+    top: 280px;
     left: 62px;
     font-size: 40px;
     z-index: 1;
@@ -80,7 +91,7 @@ h1{
 }
 
 .about-us{
-    padding: 30px;
+    padding: 80px;
     font-size: 24px;
 
 }
@@ -126,7 +137,7 @@ h1{
   position: absolute; /*  абсолютное позиционирование  */
   top: 0; left: 0; /*  располагаем псевдоэлемент там же, где и .container  */
   width: 100%; height: 100%; /*  задаем ему такие же размеры  */
-  background: url(/lamp.png);
+  background: url(/img/lamp.png);
   background-position: center;
   background-size: cover;
   filter: brightness(.5);
@@ -139,7 +150,7 @@ h1{
     position: relative;
 }
 .shelves::before{
-    background: url(/polka.png);
+    background: url(/img/polka.png);
     content: "";
     position: absolute;
     top: 0; left: 0; 
@@ -159,7 +170,7 @@ h1{
 }
 
 .cats::before{
-    background: url(/cat.png);
+    background: url(/img/cat.png);
     content: "";
     position: absolute;
     top: 0; left: 0; 
@@ -176,7 +187,7 @@ h1{
 }
 
 .vases::before{
-    background: url(/vaza.png);
+    background: url(/img/vaza.png);
     content: "";
     position: absolute;
     top: 0; left: 0; 
@@ -203,4 +214,67 @@ footer{
 
 .footer-logo{
    width: 238px;
+}
+
+.social-media img{
+    animation-delay: 5s;
+    animation: heartBeat 2s infinite;
+}
+
+/* страница категории */
+
+.item-lamp{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    padding: 30px;
+}
+
+
+.item{
+    padding: 20px;
+    width: 300px;
+    height: 460px;  
+    border: 1px solid var(--nav-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.item:hover{
+    background-color: var(--hover-color);
+    border: 3px solid var(--nav-color);
+    transform: scale(1.05);
+    transition: 2s;
+}
+
+.item>img{
+    width: 260px;
+    height: 309px;
+    border-radius: 5px;
+}
+
+.item>p{
+    font-size: 24px;
+    color: var(--nav-color);
+    }
+
+
+.item>.addToCard{
+    width: 182px;
+    height: 38px;
+    padding: 5px;
+    font-size: 24px;
+    border-radius: 5px;
+    border: none;
+    background:var(--btn-color);
+    color: var(--main-bg-color);
+}
+
+.item>.addToCard:hover{
+    background-color: var(--nav-color);
 }
