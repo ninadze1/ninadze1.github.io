@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+*{
+    margin:0;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+header{
+    font-family: 'Poppins', sans-serif;
+    background-color: #1C1E53;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 5%;
+}
+
+.banner>div{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+/* адаптивность */
+/* планшеты горизонтально */
+@media (min-width: 992px) and (max-width: 1199px) {
+ 
+}
+
+/* планшеты вертикально */
+@media (min-width: 768px) and (max-width: 991px) {
+    .banner-img{
+        width:50%;
+    }
+}
+
+/* телефоны горизонтально */
+@media (max-width: 767px) {
+    .banner-img{
+        width:70%;
+    }
+}
+
+/* телефоны вертикально */
+@media (max-width: 480px) {
+    .banner>div{
+        flex-direction: column;
+        gap:20px;
+    }
+    .banner-img{
+        width:100%;
+    }
+}
